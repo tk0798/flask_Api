@@ -9,7 +9,7 @@ from flask import Flask # flask kütüphanemizi projemize import ettik.
 
 app = Flask(__name__) # app değişkenizimizin Flask olduğunu belirttik.
 
-@app.route('/', methods=['POST','GET'])
+@app.route('/', methods=['POST'])
 def home():
     if request.method == 'POST':
         bot = WABot(request.json)
