@@ -1,4 +1,4 @@
 gunicorn
 flask
-request
+requests-2.26.0
 DateTime
