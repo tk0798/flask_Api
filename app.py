@@ -1,13 +1,8 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from wabot import WABot
 import json
 
-# app = Flask(__name__)
-
-
-from flask import Flask # flask kütüphanemizi projemize import ettik.
-
-app = Flask(__name__) # app değişkenizimizin Flask olduğunu belirttik.
+app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def home():
@@ -15,5 +10,5 @@ def home():
         bot = WABot(request.json)
         return bot.processing()
 
-# if(__name__) == '__main__':
-#     app.run()
+if(__name__) == '__main__':
+    app.run()
