@@ -9,9 +9,11 @@ from flask import Flask # flask kütüphanemizi projemize import ettik.
 
 app = Flask(__name__) # app değişkenizimizin Flask olduğunu belirttik.
 
-@app.route("/") # Endpoint imizi tanımladık.
-def hello(): # Bir fonksiyon oluşturduk.
-    return "Hello World" # Sitemizde görmek istediğimiz şeyi return ettik.
+@app.route('/', methods=['POST','GET'])
+def home():
+    if request.method == 'POST':
+        bot = WABot(request.json)
+        return bot.processing()
 
 # if(__name__) == '__main__':
 #     app.run()
