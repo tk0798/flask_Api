@@ -13,5 +13,5 @@ app = Flask(__name__) # app değişkenizimizin Flask olduğunu belirttik.
 def hello(): # Bir fonksiyon oluşturduk.
     return "Hello World" # Sitemizde görmek istediğimiz şeyi return ettik.
 
-if(__name__) == '__main__':
-    app.run()
+# if(__name__) == '__main__':
+#     app.run()
